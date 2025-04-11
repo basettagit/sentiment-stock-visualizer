@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				dashboard: {
+					"dark-bg": "#1A1A1A",
+					"card-bg": "#2A2A2A",
+					"dark-gray": "#4A4A4A",
+					"light-gray": "#B0B0B0",
+					"green": "#34C759",
+					"dark-green": "#1A3C34",
+					"red": "#FF3B30",
+					"yellow": "#FFD700",
+					"tech": "#FFD700",
+					"bio": "#FF3B30",
+					"finance": "#34C759",
+					"energy": "#FFA500",
+					"consumer": "#00CED1",
 				}
 			},
 			borderRadius: {
@@ -84,11 +100,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out'
+			},
+			backgroundImage: {
+				'gradient-green': 'linear-gradient(to right, #34C759, #1A3C34)'
 			}
 		}
 	},
