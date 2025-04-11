@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Home, LineChart, Database, Settings, PieChart } from 'lucide-react';
+import { Home, LineChart, Database, PieChart, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface DashboardSidebarProps {
