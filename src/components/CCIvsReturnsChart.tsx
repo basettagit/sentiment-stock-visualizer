@@ -22,10 +22,10 @@ interface CCIvsReturnsChartProps {
 }
 
 const CCIvsReturnsChart: React.FC<CCIvsReturnsChartProps> = ({ data, selectedSector }) => {
-  // Format date for X-axis
+  // Format date for X-axis - modified to return a string instead of number
   const formatXAxis = (dateStr: string) => {
     const date = new Date(dateStr);
-    return date.getFullYear();
+    return date.getFullYear().toString(); // Convert number to string
   };
   
   // Only show year labels every 5 years
