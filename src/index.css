@@ -164,3 +164,24 @@
     @apply py-2;
   }
 }
+
+/* ShadCN component styles */
+.radix-dropdown-content {
+  @apply bg-dashboard-card-bg border-dashboard-dark-gray !z-50;
+}
+
+.select-content {
+  @apply bg-dashboard-card-bg border-dashboard-dark-gray text-white !z-50;
+}
+
+.select-item:hover {
+  @apply bg-dashboard-dark-gray text-white;
+}
+
+.select-item {
+  @apply text-white cursor-pointer;
+}
+
+.select-item[data-selected] {
+  @apply bg-dashboard-green text-white;
+}

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Home, LineChart, Database, Settings, PieChart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface DashboardSidebarProps {
   activeItem: string;
@@ -12,11 +13,11 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
   onItemClick
 }) => {
   const menuItems = [
-    { id: 'home', icon: Home, label: 'Home' },
-    { id: 'charts', icon: LineChart, label: 'Charts' },
-    { id: 'data', icon: Database, label: 'Data' },
-    { id: 'models', icon: PieChart, label: 'Models' },
-    { id: 'settings', icon: Settings, label: 'Settings' }
+    { id: 'home', icon: Home, label: 'Home', path: '/' },
+    { id: 'charts', icon: LineChart, label: 'Charts', path: '/charts' },
+    { id: 'data', icon: Database, label: 'Data', path: '/data' },
+    { id: 'models', icon: PieChart, label: 'Models', path: '/models' },
+    { id: 'settings', icon: Settings, label: 'Settings', path: '/settings' }
   ];
 
   return (
@@ -24,14 +25,15 @@ const DashboardSidebar: React.FC<DashboardSidebarProps> = ({
       {menuItems.map((item) => {
         const Icon = item.icon;
         return (
-          <button
+          <Link
             key={item.id}
+            to={item.path}
             className={`sidebar-icon ${activeItem === item.id ? 'active' : ''}`}
             onClick={() => onItemClick(item.id)}
             title={item.label}
           >
             <Icon size={20} />
-          </button>
+          </Link>
         );
       })}
     </aside>

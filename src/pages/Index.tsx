@@ -80,6 +80,11 @@ const Index = () => {
     refetchHistorical();
   };
 
+  // Handle sector selection from header dropdown
+  const handleSectorChange = (newSector: string) => {
+    setSelectedSector(newSector);
+  };
+
   // Transform data for UI components
   const getSentimentValues = () => {
     if (!retailSalesData || retailSalesData.length < 12) {

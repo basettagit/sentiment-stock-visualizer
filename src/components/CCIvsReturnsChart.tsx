@@ -10,7 +10,6 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
-import { MoreHorizontal } from 'lucide-react';
 
 interface CCIvsReturnsChartProps {
   data: Array<{
@@ -35,7 +34,6 @@ const CCIvsReturnsChart: React.FC<CCIvsReturnsChartProps> = ({ data, selectedSec
     <div className="dashboard-card h-full">
       <div className="dashboard-title">
         CCI vs {selectedSector} Returns Trend
-        <MoreHorizontal size={16} className="text-dashboard-light-gray" />
       </div>
       <div className="h-[250px] mt-4">
         <ResponsiveContainer width="100%" height="100%">
